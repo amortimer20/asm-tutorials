@@ -1,0 +1,6 @@
+#!/bin/sh
+
+nasm -f elf32 $1.asm &&
+ld -m elf_i386 $1.o -o $1.out &&
+./$1.out &&
+rm $1.o $1.out
